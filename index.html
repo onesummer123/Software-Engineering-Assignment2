@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPT304-Assignment2</title>
+    <script src="Holiday.js"></script>
+    <script src="Rental.js"></script>
+    <script src="Weather.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- holiday -->
+    <h1>Holiday</h1>
+    <p>Input the country abbreviation and the year you want to search for public holidays and click the button to wait the system display the holiday list</p>
+    <p>
+        <label for="countryAbb">Country Abbreviation : </label>
+        <input type="text" id="countryAbb" >  (Input format: CN, US, UK, ...; For example: CN represents China)
+    </p>
+    <p>
+        <label for="year">Year : </label>
+        <input type="text" id="year">  (For example: 2020, 2021, ...)
+    </p>
+    <button type="button" onclick="getHolidays()" style="margin-left: 25px;">Return Holidays</button>
+    <hr/>
+
+    <!-- weather -->
+    <h1>Weather</h1>
+    <p>Input the city and date you want to search for the recent weather and click the button to wait the system display the output list</p>
+    <p>
+        <label for="city">City Name: </label>
+        <input type="text" id="city" >
+        (For example: Suzhou, Beijing, Shanghai, ...)
+    </p>   
+    <p>
+        <label for="province">Province/State Abbreviation: </label>
+        <input type="text" id="province" >
+        (For example: "JS" for Jiangsu (in China); "NY" for New York (in USA))
+    </p>
+    <p>
+        <label for="country">Country Abbreviation: </label>
+        <input type="text" id="country" >
+        (Input format: CHN, USA, UK, ...; For example: CHN represents China)
+    </p>
+    <p>
+    <label for="date">Date: </label>
+    <input type="text" id="date" >(Input format: YYYY-MM-DD; For example: 2020-01-01)
+    </p>
+    <button type="button" onclick="getWeather()" style="margin-left: 25px;">Return Weather</button>
+    <hr/>
+
+    <!-- rental -->
+    <h1>Rental</h1>
+    <p>Input the city you want to search for rental information and click the button to wait the system to display the output list</p>
+    <p>
+        <label for="cityName">City Name: </label>
+        <input type="text" id="cityName" >
+        (For example: Beijing, Shanghai, Shenzhen...)
+    </p>
+    <button type="button" onclick="getRental()" style="margin-left: 25px;">Retrun Rental</button>
+    <hr/><hr/>
+
+
+    <!-- display outputs -->
+    <h4>Results for Holiday List:
+    <pre id="holidayList"></pre>
+    <br><hr/>
+    <h4>Results for Weather List:
+    <pre id="weatherList"></pre>
+    <br><hr/>
+    <h4>Results for Rental List:
+    <pre id="rentalList"></pre>
+
+
+</body>
+</html>
